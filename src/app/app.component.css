@@ -1,8 +1,10 @@
 .title {
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
+  margin: 20px 30px;
+  align-content: center;
+  justify-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50%;
   display: flex;
+
+  background: #125bda;
 }
