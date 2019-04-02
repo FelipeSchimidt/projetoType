@@ -157,6 +157,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/forms@^7.2.11":
+  version "7.2.11"
+  resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-7.2.11.tgz#0f040cd8d1e072c054f10cfed804827f1db87f88"
+  integrity sha512-S7qpaA4lP4yU5HsOvPuf4bpDGiqP6YjwcWHcTkm1kx9oiHGvmUoQAkFw06SMh2YCsGi413Qqys/4L0H8+8Za2A==
+  dependencies:
+    tslib "^1.9.0"
+
 "@angular/platform-browser-dynamic@^7.2.11":
   version "7.2.11"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-7.2.11.tgz#b5afa0758fc8a3be27851dd4912c739087fa4787"
@@ -186,6 +193,13 @@
     chalk "^2.0.0"
     esutils "^2.0.2"
     js-tokens "^4.0.0"
+
+"@ng-bootstrap/ng-bootstrap@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-4.1.0.tgz#84c542e7dbb1e03944c87a2615199edc39c3d6c7"
+  integrity sha512-7THBEgwDW9bs3R6JQ3glDXAxyihrUqM8p71Es2GpN21xLs2fcxUUcLO4ioRcWGGlR6QKwamzNVAHNUDB5IMY+Q==
+  dependencies:
+    tslib "^1.9.0"
 
 "@ngtools/webpack@7.3.7", "@ngtools/webpack@^7.3.7":
   version "7.3.7"

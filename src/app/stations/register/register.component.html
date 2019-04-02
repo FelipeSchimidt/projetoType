@@ -1,0 +1,72 @@
+<form action="">
+  <div class="form-group row form-style">
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" placeholder="Name of station" />
+    </div>
+
+    <label for="code" class="col-sm-2 col-form-label">Code</label>
+    <div class="col-sm-4">
+      <input
+        type="text"
+        name="code"
+        class="form-control"
+        placeholder="Code of station"
+      />
+    </div>
+  </div>
+  <div class="form-group row form-style">
+    <label for="state" class="col-sm-2 col-form-label">State</label>
+    <div class="col-sm-4">
+      <input
+        type="text"
+        name="state"
+        id=""
+        class="form-control"
+        placeholder="State"
+      />
+    </div>
+    <label for="city" class="col-sm-2 col-form-label">City</label>
+    <div class="col-sm-4">
+      <input
+        type="text"
+        name="city"
+        id=""
+        class="form-control"
+        placeholder="City"
+      />
+    </div>
+  </div>
+  <div class="form-group row form-style">
+    <fieldset>
+      <legend>Locations</legend>
+      <div class="form-group row form-style">
+        <label for="latitude" class="col col-form-label">Latitude</label>
+        <input
+          type="text"
+          name="latitude"
+          id=""
+          class="form-control col"
+          placeholder="(+/-) dd.mmmm"
+        />
+        <label for="longitude" class="col col-form-label">Longitude</label>
+        <input
+          type="text"
+          name="longitude"
+          id=""
+          class="form-control col"
+          placeholder="(+/-) dd.mmmm"
+        />
+        <label for="zone" class="col col-form-label">Zone</label>
+        <input
+          type="text"
+          name="zone"
+          id=""
+          class="form-control col"
+          placeholder="Ex. 21Z"
+        />
+      </div>
+    </fieldset>
+  </div>
+  <button type="submit" class="btn btn-primary form-style">Salvar</button>
+</form>
