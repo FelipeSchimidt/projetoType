@@ -1,11 +1,13 @@
-<ngb-tabset>
-  <ngb-tab title="Station">
+<ngb-tabset [justify]="allignTabset">
+  <ngb-tab type="pills" title="Station" class="tab-forms">
     <ng-template ngbTabContent>
+      <br />
       <app-list-stations></app-list-stations>
     </ng-template>
   </ngb-tab>
-  <ngb-tab title="Cadastro">
+  <ngb-tab type="pills" title="Cadastro" class="">
     <ng-template ngbTabContent>
+      <br />
       <app-register-station></app-register-station>
     </ng-template>
   </ngb-tab>

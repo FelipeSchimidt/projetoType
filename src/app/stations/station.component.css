@@ -1,3 +1,14 @@
 .tab-forms {
   margin: 10px 40px;
+  font-size: 18px;
+  color: #77aacc;
+}
+
+ngb-tabset {
+  align-items: center;
+  justify-content: center;
+}
+
+ng-template {
+  margin: 40px;
 }

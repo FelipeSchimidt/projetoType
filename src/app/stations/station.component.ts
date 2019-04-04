@@ -5,4 +5,6 @@ import { Component } from '@angular/core'
   templateUrl: 'station.component.html',
   styleUrls: ['station.component.css']
 })
-export class StationComponent {}
+export class StationComponent {
+  public allignTabset = 'center'
+}

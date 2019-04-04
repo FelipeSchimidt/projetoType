@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
@@ -15,6 +16,7 @@ import { ListStationComponent } from '../stations/list/list.component'
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   exports: [

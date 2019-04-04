@@ -1,10 +1,15 @@
-<form action="">
+<form [formGroup]="formStations" (ngSubmit)="save()">
+  <!-- <form> -->
   <div class="form-group row form-style">
     <label for="name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" placeholder="Name of station" />
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Name of station"
+        formControlName="name"
+      />
     </div>
-
     <label for="code" class="col-sm-2 col-form-label">Code</label>
     <div class="col-sm-4">
       <input
@@ -12,10 +17,11 @@
         name="code"
         class="form-control"
         placeholder="Code of station"
+        formControlName="code"
       />
     </div>
   </div>
-  <div class="form-group row form-style">
+  <div class="form-group row form-style" formGroupName="info">
     <label for="state" class="col-sm-2 col-form-label">State</label>
     <div class="col-sm-4">
       <input
@@ -24,6 +30,7 @@
         id=""
         class="form-control"
         placeholder="State"
+        formControlName="state"
       />
     </div>
     <label for="city" class="col-sm-2 col-form-label">City</label>
@@ -34,6 +41,7 @@
         id=""
         class="form-control"
         placeholder="City"
+        formControlName="city"
       />
     </div>
   </div>
@@ -69,4 +77,5 @@
     </fieldset>
   </div>
   <button type="submit" class="btn btn-primary form-style">Salvar</button>
+  <button class="btn btn-danger form-style">Cancel</button>
 </form>

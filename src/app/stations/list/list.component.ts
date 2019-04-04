@@ -3,7 +3,8 @@ import { DataService } from 'src/app/services/eolica.service'
 
 @Component({
   selector: 'app-list-stations',
-  templateUrl: 'list.component.html'
+  templateUrl: 'list.component.html',
+  styleUrls: ['list.component.css']
 })
 export class ListStationComponent implements OnInit {
   public stations = []
