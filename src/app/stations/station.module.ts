@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { StationComponent } from '../stations/station.component'
 import { RegisterStationComponent } from '../stations/register/register.component'
 import { ListStationComponent } from '../stations/list/list.component'
+import { HttpModule } from '@angular/http'
+import { ShareModule } from '../shared/share.module'
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ListStationComponent } from '../stations/list/list.component'
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpModule,
+    ShareModule
   ],
   exports: [
     StationComponent,

@@ -1,0 +1,158 @@
+<form
+  action="../list/list.component.html"
+  [formGroup]="formStations"
+  (ngSubmit)="onSubmit()"
+>
+  <!-- <form> -->
+
+  <div class="form-group row form-style">
+    <label for="name" class="col-sm-1 col-form-label">Name</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Name of station"
+        formControlName="name"
+        required
+        minlength="3"
+        #name
+      />
+    </div>
+    <div
+      *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="alert alert-danger"
+    >
+      <div *ngIf="name.errors.required">
+        Name is required
+      </div>
+    </div>
+    <label for="code" class="col-sm-1 col-form-label">Code</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        name="code"
+        class="form-control"
+        placeholder="Code of station"
+        formControlName="code"
+      />
+    </div>
+  </div>
+  <div class="form-group row form-style" formGroupName="info">
+    <label for="state" class="col-sm-1 col-form-label">State</label>
+    <div class="col-sm-5">
+      <select
+        name="state"
+        id=""
+        formControlName="state"
+        class="form-control"
+        *ngFor="let estados of apiEstados"
+      >
+        <option *ngFor="let estado of estados">{{ estado.nome }}</option>
+      </select>
+      <!-- <input
+        type="text"
+        name="state"
+        id=""
+        class="form-control"
+        placeholder="State"
+        formControlName="state"
+      /> -->
+    </div>
+    <label for="city" class="col-sm-1 col-form-label">City</label>
+    <div class="col-sm-5">
+      <input
+        type="text"
+        name="city"
+        id=""
+        class="form-control"
+        placeholder="City"
+        formControlName="city"
+      />
+    </div>
+  </div>
+  <div class="form-group row form-style" formGroupName="coordinates">
+    <fieldset>
+      <legend>Locations</legend>
+      <div class="form-group row form-style">
+        <label for="latitude" class="col col-form-label">Latitude</label>
+        <input
+          type="text"
+          name="latitude"
+          id=""
+          class="form-control col"
+          placeholder="(+/-) dd.mmmm"
+          formControlName="latitude"
+        />
+        <label for="longitude" class="col col-form-label">Longitude</label>
+        <input
+          type="text"
+          name="longitude"
+          id=""
+          class="form-control col"
+          placeholder="(+/-) dd.mmmm"
+          formControlName="longitude"
+        />
+        <label for="zone" class="col col-form-label">Zone</label>
+        <input
+          type="text"
+          name="zone"
+          id=""
+          class="form-control col"
+          placeholder="Ex. 21Z"
+          formControlName="zone"
+        />
+      </div>
+    </fieldset>
+  </div>
+
+  <button type="submit" class="btn btn-primary form-style">Salvar</button>
+  <button class="btn btn-danger form-style">Cancel</button>
+</form>
+
+
+
+COMPONENT
+
+  formStations = new FormGroup({
+    'name': new FormControl('', [Validators.required]),
+    code: new FormControl(''),
+    info: new FormGroup({
+      city: new FormControl(),
+      state: new FormControl()
+    }),
+    coordinates: new FormGroup({
+      latitude: new FormControl(''),
+      longitude: new FormControl(),
+      zone: new FormControl('')
+    })
+  })
+  /* public formStations = this.fb.group({
+      name: [''],
+      code: [''],
+      info: this.fb.group({
+        city: [''],
+        state: [''],
+        coordinates: this.fb.group({
+          latitude: [''],
+          longitude: [''],
+          zone: ['']
+        })
+      })
+    }) */
+
+
+STYLES
+
+.form-style {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+fieldset {
+  padding: 10px 0px;
+}
+
+legend {
+  font-size: 16px;
+  margin-left: 10px;
+}
