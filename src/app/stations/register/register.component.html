@@ -1,18 +1,72 @@
 <form class="form-horizontal" [formGroup]="forms" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <div class="col-sm-12">
-      <label for="name" class="control-label">Name</label>
-    </div>
-    <div class="col-sm 12">
-      <input type="text" class="form-control" formControlName="name" />
-    </div>
-    <div class="col-sm-12">
-      <label for="code" class="control-label">Code</label>
-    </div>
-    <div class="col-sm 12">
-      <input type="text" class="form-control" formControlName="code" />
+  <div>
+    <div class="form-group row">
+      <div class="col-sm-12 col-form-label">
+        <label for="name" class="control-label">Estação</label>
+      </div>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" formControlName="name" />
+        <app-campo-control-error
+          [mostrarErro]="verificarCampoValido('name')"
+          msgErro="Nome é obrigatorio"
+        ></app-campo-control-error>
+      </div>
     </div>
   </div>
+  <div>
+    <div class="form-group row">
+      <div class="col-sm-12 col-form-label">
+        <label for="code" class="control-label">Codigo</label>
+      </div>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" formControlName="code" />
+        <app-campo-control-error
+          [mostrarErro]="verificarCampoValido('code')"
+          msgErro="Code é obrigatorio"
+        ></app-campo-control-error>
+      </div>
+    </div>
+  </div>
+  <div formGroupName="info">
+    <div class="form-group row">
+      <div class="col-sm-12 col-form-label">
+        <label for="state" class="control-label">Estado</label>
+      </div>
+      <div class="col-sm-12">
+        <select class="form-control" title="Estados" *ngFor="let estados of apiEstados" formControlName="state">
+          <option *ngFor="let estado of estados">{{ estado.nome }}</option>
+        </select>
+      </div>
+    </div>
+    <div >
+    <div class="form-group row">
+      <div class="col-sm-12 col-form-label">
+        <label for="cidade" class="control-label">Cidades</label>
+      </div>
+      <div class="col-sm-12">
+        <select class="form-control" title="Cidades" *ngFor="let cidades of apiCidades" formControlName="city">
+          <option *ngFor="let cidade of cidades">{{ cidade.nome }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--div>
+      <div class="form-group row">
+        <div class="col-sm-12 col-form-label">
+          <label for="city" class="control-label">Cidade</label>
+        </div>
+        <div class="col-sm-12">
+          <input type="text" class="form-control" formControlName="city" />
+          <app-campo-control-error
+            [mostrarErro]="verificarCampoValido('city')"
+            msgErro="Cidade é obrigatorio"
+          ></app-campo-control-error>
+        </div>
+      </div>
+    </div>
+  </div-->
+    
   <button class="btn btn-primary">Submit</button>
 
   <app-form-debug [form]="forms"></app-form-debug>

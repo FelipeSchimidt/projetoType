@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ReactiveFormsModule } from '@angular/forms'
+import { HttpModule } from '@angular/http'
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { StationComponent } from '../stations/station.component'
 import { RegisterStationComponent } from '../stations/register/register.component'
 import { ListStationComponent } from '../stations/list/list.component'
-import { HttpModule } from '@angular/http'
+
 import { ShareModule } from '../shared/share.module'
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ShareModule } from '../shared/share.module'
   ],
   exports: [
     StationComponent,
-    RegisterStationComponent
+    RegisterStationComponent,
+    ShareModule
   ]
 })
 export class StationModule {}

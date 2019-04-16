@@ -10,7 +10,9 @@ import { Observable } from 'rxjs'
 })
 
 export class DataService {
+
     private urlEstados = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
+    private urlCidades = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios'
     private urlLocal = 'http://localhost:3001'
     private urlTeste = 'https://httpbin.org/post'
 
@@ -30,5 +32,13 @@ export class DataService {
 
     public getEstados () {
       return this._http.get(this.urlEstados)
+    }
+
+    public getCidades (){
+      return this._http.get(this.urlCidades)
+    }
+
+    public getCidadesUf (uf){
+      return this._http.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`)
     }
 }
